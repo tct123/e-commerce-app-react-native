@@ -10,7 +10,7 @@ export const REMOVE_FAVORITE = "REMOVE_FAVORITE";
 export const fetchFavorite = () => {
   return async (dispatch, getState) => {
     const user = getState().auth.user;
-    if (user.userid != undefined) {
+    if (user.userid !== undefined) {
       dispatch({
         type: FAVORITE_LOADING,
       });

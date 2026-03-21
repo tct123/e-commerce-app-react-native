@@ -45,7 +45,7 @@ export const AuthBody = () => {
     checkDeviceForHardware();
     checkForFingerprints();
     getData();
-  }, [user.id]);
+  });
   const checkDeviceForHardware = async () => {
     let compatible = await LocalAuthentication.hasHardwareAsync();
     setIsSupport(compatible);

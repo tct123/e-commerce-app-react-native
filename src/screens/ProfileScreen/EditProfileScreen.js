@@ -23,7 +23,7 @@ export const EditProfileScreen = (props) => {
     if (user.phone !== phone || user.address !== address) {
       setDisableBotton(false);
     }
-  }, [address, phone]);
+  }, [address, phone, user.address, user.phone]);
 
   const updateInfoHandler = async () => {
     if (phone.length === 10 && address.length >= 6) {

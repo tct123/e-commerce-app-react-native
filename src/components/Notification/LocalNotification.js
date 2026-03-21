@@ -14,15 +14,15 @@ const LocalNotification = () => {
   const trigger =
     Platform.OS === "ios"
       ? {
-          hour: 8,
-          minute: 15,
-          type: "daily",
-        }
+        hour: 8,
+        minute: 15,
+        type: "daily",
+      }
       : {
-          hour: 8,
-          minute: 15,
-          repeats: true,
-        };
+        hour: 8,
+        minute: 15,
+        repeats: true,
+      };
   useEffect(() => {
     Notifications.cancelAllScheduledNotificationsAsync();
     const triggerNotificationHandler = async () => {
@@ -54,7 +54,7 @@ const LocalNotification = () => {
       backgroundSubscription.remove();
       foregroundSubscription.remove();
     };
-  }, []);
+  });
 
   //local notifications
 

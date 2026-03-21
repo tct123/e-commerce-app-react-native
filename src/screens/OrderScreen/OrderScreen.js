@@ -25,7 +25,7 @@ export const OrderScreen = ({ navigation }) => {
   }, [dispatch, setIsRefreshing]);
   useEffect(() => {
     loadOrders();
-  }, [user.userid]);
+  }, [loadOrders, user.userid]);
 
   return (
     <View style={styles.container}>

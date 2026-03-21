@@ -18,7 +18,7 @@ const MyComponent = ({ checkVisible, message }) => {
         action={{
           label: 'Dismiss',
           onPress: () => {
-            onDismissSnackBar;
+            onDismissSnackBar();
           },
         }}
       >

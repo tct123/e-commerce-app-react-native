@@ -43,7 +43,7 @@ const User = ({ getReceiver, checkValidation }) => {
 
   useEffect(() => {
     getReceiver(receiverName, phone, address);
-  }, [receiverName, phone, address]);
+  }, [receiverName, phone, address, getReceiver]);
 
   return (
     <View style={styles.container}>

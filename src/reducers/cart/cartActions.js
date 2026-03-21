@@ -15,7 +15,7 @@ export const fetchCart = () => {
     const emptyCart = {
       items: [],
     };
-    if (user.userid != undefined) {
+    if (user.userid !== undefined) {
       dispatch({
         type: CART_LOADING,
       });

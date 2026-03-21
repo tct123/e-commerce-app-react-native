@@ -15,7 +15,7 @@ import { Header } from './Header';
 //PropTypes check
 import PropTypes from 'prop-types';
 
-ITEM_HEIGHT = 100;
+const ITEM_HEIGHT = 100;
 
 const AnimatedSectionList = Animated.createAnimatedComponent(SectionList);
 

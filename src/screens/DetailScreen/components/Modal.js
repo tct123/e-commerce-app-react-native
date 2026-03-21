@@ -163,8 +163,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     marginVertical: 30,
-    height: 50,
-    width: "100%",
+    height: 50
   },
   success: {
     marginLeft: 10,

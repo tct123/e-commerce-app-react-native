@@ -41,12 +41,12 @@ const Address = ({ getInfo }) => {
         setGetTowns(town[0]);
       }
     },
-    [selectedProvince]
+    []
   );
   //get Address
   useEffect(() => {
     getInfo(selectedProvince, selectedTown);
-  }, [selectedProvince, selectedTown]);
+  }, [getInfo, selectedProvince, selectedTown]);
   //Show Icon
   const showIconPlatform =
     Platform.OS === "android" ? (
@@ -103,7 +103,6 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     marginBottom: 15,
     paddingHorizontal: 10,
-    borderColor: Colors.text,
     borderRadius: 5,
     flexDirection: "row",
     alignItems: "center",

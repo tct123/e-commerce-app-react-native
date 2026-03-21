@@ -6,6 +6,7 @@ import {
   StyleSheet,
   Dimensions,
   StatusBar,
+  Platform,
 } from "react-native";
 import slides from "../../../db/IntroSlides";
 //PropTypes check
@@ -47,8 +48,8 @@ const styles = StyleSheet.create({
       Platform.OS === "android"
         ? StatusBar.currentHeight + 10
         : height > 667
-        ? 50
-        : 35,
+          ? 50
+          : 35,
     alignItems: "center",
     overflow: "hidden",
     height: TICKER_HEIGHT,

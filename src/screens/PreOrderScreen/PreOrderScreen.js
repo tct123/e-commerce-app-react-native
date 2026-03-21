@@ -58,7 +58,7 @@ export const PreOrderScreen = (props) => {
   const fullAddress = `${address}, ${town} ,${province}`;
   const toPayment = async () => {
     try {
-      if (error == undefined && province.length !== 0 && town.length !== 0) {
+      if (error === undefined && province.length !== 0 && town.length !== 0) {
         props.navigation.navigate("Payment", {
           screen: "PaymentScreen",
           params: {
@@ -94,7 +94,7 @@ export const PreOrderScreen = (props) => {
     if (carts.items.length === 0) {
       props.navigation.goBack();
     }
-  }, [carts.items]);
+  }, [carts.items, props.navigation]);
   return (
     <View style={styles.container}>
       <Header navigation={props.navigation} />

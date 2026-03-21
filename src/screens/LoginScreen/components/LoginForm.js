@@ -99,7 +99,7 @@ const Login = (props) => {
     }
   };
   return (
-    <KeyboardAvoidingView behavior={Platform.OS == 'ios' ? 'position' : 'height'}>
+    <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'position' : 'height'}>
       <TouchableOpacity
         onPress={() => {
           props.navigation.goBack();

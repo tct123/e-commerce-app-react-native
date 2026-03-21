@@ -35,7 +35,7 @@ export const DetailScreen = (props) => {
       setColor(getColor);
     };
     checkColor();
-  }, [item]);
+  }, [item, type]);
 
   return (
     <View style={styles.container}>

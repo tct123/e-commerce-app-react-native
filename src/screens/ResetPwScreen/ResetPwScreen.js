@@ -20,6 +20,7 @@ import { ResetPassword } from "../../reducers";
 import Loader from "../../components/Loaders/Loader";
 import * as SecureStore from "expo-secure-store";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { secretKey } from "../../utils/Config";
 
 //Validation
 const validate = (values) => {

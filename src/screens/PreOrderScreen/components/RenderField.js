@@ -5,7 +5,7 @@ import CustomText from "../../../components/UI/CustomText";
 //Colors
 import Colors from "../../../utils/Colors";
 
-export default renderField = ({
+export const renderField = ({
   label,
   maxLength,
   keyboardType,
@@ -17,7 +17,7 @@ export default renderField = ({
 }) => {
   useEffect(() => {
     checkValidation(error);
-  }, [onChangeText]);
+  }, [checkValidation, error, onChangeText]);
   return (
     <View>
       <View>

@@ -33,7 +33,7 @@ export const CartScreen = (props) => {
   }, [dispatch, setIsRefreshing]);
   useEffect(() => {
     loadCarts();
-  }, [user.userid]);
+  }, [loadCarts, user.userid]);
 
   return (
     <View style={styles.container}>

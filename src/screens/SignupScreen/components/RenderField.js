@@ -6,7 +6,7 @@ import Colors from "../../../utils/Colors";
 import CustomText from "../../../components/UI/CustomText";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
-export default renderField = ({
+export const renderField = ({
   label,
   keyboardType,
   secureTextEntry,

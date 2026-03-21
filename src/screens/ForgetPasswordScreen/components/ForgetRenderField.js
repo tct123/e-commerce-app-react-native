@@ -5,7 +5,7 @@ import CustomText from "../../../components/UI/CustomText";
 //Colors
 import Colors from "../../../utils/Colors";
 
-export default renderField = ({
+export const renderField = ({
   keyboardType,
   icon,
   label,

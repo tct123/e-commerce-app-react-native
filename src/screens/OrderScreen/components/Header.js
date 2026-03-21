@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet, TouchableOpacity, Dimensions } from "react-native";
+import { View, StyleSheet, TouchableOpacity, Dimensions, Platform } from "react-native";
 //Icon
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import CustomText from "../../../components/UI/CustomText";

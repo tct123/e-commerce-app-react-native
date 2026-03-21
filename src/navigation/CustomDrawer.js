@@ -25,7 +25,7 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { Logout as LogoutAction } from "../reducers";
 //Link
 import { OpenURL } from "../utils/Tools";
-import { TouchableOpacity } from "react-native-gesture-handler";
+import { Pressable } from "react-native-gesture-handler";
 
 const fbURL = "https://www.facebook.com/daquyankhangthinhvuong/";
 const youtubeURL = "https://www.youtube.com/";
@@ -66,7 +66,7 @@ export default (props) => {
         ) : (
           <>
             <View style={styles.profileContainer}>
-              <TouchableOpacity
+              <Pressable
                 onPress={() => props.navigation.navigate("Profile")}
               >
                 <Image
@@ -77,7 +77,7 @@ export default (props) => {
                       : { uri: user.profilePicture }
                   }
                 />
-              </TouchableOpacity>
+              </Pressable>
               <View style={{ justifyContent: "center" }}>
                 <Text
                   style={{

@@ -35,11 +35,10 @@ import { ProductScreen } from '../screens/ProductScreen';
 // Order Screens
 import { OrderScreen } from '../screens/OrderScreen';
 import { PreOrderScreen } from '../screens/PreOrderScreen';
-import { PaymentScreen , AddCreditCardScreen } from '../screens/PaymentScreen';
+import { PaymentScreen, AddCreditCardScreen } from '../screens/PaymentScreen';
 import { FinishOrderScreen } from '../screens/FinishOrderScreen';
 // Profile Screens
-import { ProfileScreen } from '../screens/ProfileScreen';
-import { EditProfileScreen } from '../screens/ProfileScreen';
+import { ProfileScreen, EditProfileScreen } from '../screens/ProfileScreen';
 // redux
 import { useSelector } from 'react-redux';
 
@@ -163,7 +162,7 @@ export const HomeStackScreen = () => (
     <HomeStack.Screen
       name="Home"
       component={HomeScreen}
-      //animationEnabled: false , nằm trong option
+    //animationEnabled: false , nằm trong option
     />
     <HomeStack.Screen name="Detail" component={DetailScreen} />
     <HomeStack.Screen name="Cart" component={CartStackScreen} />

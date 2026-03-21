@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { LogBox } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { useSelector , useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { NavigationContainer } from '@react-navigation/native';
 import { navigationRef } from './RootNavigation';
 import { DrawerNavigator, IntroStackScreen } from './StoneNavigator';
@@ -54,7 +54,7 @@ export const AppNavigator = () => {
       return;
     };
     autoLogout();
-  }, []);
+  }, [dispatch]);
   useEffect(() => {
     const autoLogout = async () => {
       const getUser = await AsyncStorage.getItem('user');
@@ -67,7 +67,7 @@ export const AppNavigator = () => {
       return;
     };
     autoLogout();
-  }, []);
+  }, [dispatch]);
   return (
     <NavigationContainer ref={navigationRef}>
       <Host>

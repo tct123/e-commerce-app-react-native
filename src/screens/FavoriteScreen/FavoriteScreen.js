@@ -28,7 +28,7 @@ export const FavoriteScreen = ({ navigation }) => {
   }, [dispatch, setIsRefreshing]);
   useEffect(() => {
     loadFavoriteProducts();
-  }, [user.userid]);
+  }, [loadFavoriteProducts, user.userid]);
 
   return (
     <View style={styles.container}>
