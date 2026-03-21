@@ -19,7 +19,7 @@ import Colors from '../../../utils/Colors';
 //Search Item component
 import SearchItem from './SearchItem';
 import Animated, { Easing } from 'react-native-reanimated';
-import { TouchableOpacity, TextInput } from 'react-native-gesture-handler';
+import { Pressable, TextInput } from 'react-native-gesture-handler';
 const { Value, timing } = Animated;
 // Calculate window size
 const { width, height } = Dimensions.get('window');
@@ -160,7 +160,7 @@ export class Header extends React.Component {
             ]}
           >
             <View style={styles.header_inner}>
-              <TouchableOpacity
+              <Pressable
                 onPress={() => this.props.navigation.toggleDrawer()}
               >
                 <Ionicons
@@ -168,7 +168,7 @@ export class Header extends React.Component {
                   size={30}
                   color={Colors.lighter_green}
                 />
-              </TouchableOpacity>
+              </Pressable>
               <View>
                 <Image
                   source={require('../../../assets/Images/logoNoText.png')}
@@ -178,14 +178,14 @@ export class Header extends React.Component {
                   }}
                 />
               </View>
-              <TouchableOpacity
+              <Pressable
                 activeOpacity={1}
                 underlayColor={'#ccd0d5'}
                 onPress={this._onFocus}
                 style={styles.search_icon_box}
               >
                 <Ionicons name='ios-search' size={20} color={Colors.white} />
-              </TouchableOpacity>
+              </Pressable>
               <Animated.View
                 style={[
                   styles.input_box,
@@ -193,7 +193,7 @@ export class Header extends React.Component {
                 ]}
               >
                 <Animated.View style={{ opacity: this._back_button_opacity }}>
-                  <TouchableOpacity
+                  <Pressable
                     activeOpacity={1}
                     underlayColor={'#ccd0d5'}
                     onPress={this._onBlur}
@@ -204,7 +204,7 @@ export class Header extends React.Component {
                       size={25}
                       color={Colors.light_green}
                     />
-                  </TouchableOpacity>
+                  </Pressable>
                 </Animated.View>
                 <TextInput
                   ref='input'
@@ -289,8 +289,8 @@ const styles = StyleSheet.create({
       Platform.OS === 'android'
         ? StatusBar.currentHeight
         : height > 736
-        ? 40
-        : 20,
+          ? 40
+          : 20,
   },
   header_inner: {
     flex: 1,

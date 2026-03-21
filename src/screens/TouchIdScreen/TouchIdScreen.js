@@ -1,6 +1,7 @@
 import React from "react";
-import { StyleSheet, SafeAreaView, StatusBar, Platform } from "react-native";
+import { StyleSheet, StatusBar, Platform } from "react-native";
 import { AuthBody, Header } from "./components";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export const TouchIdScreen = ({ navigation }) => {
   return (

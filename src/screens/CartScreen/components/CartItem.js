@@ -25,7 +25,7 @@ export class CartItem extends React.PureComponent {
     };
     const sum = +item.item.price * +item.quantity;
     const checkDesQuantity = async () => {
-      if (item.quantity == 1) {
+      if (item.quantity === 1) {
         Alert.alert(
           "Xóa giỏ hàng",
           "Bạn có chắc muốn xóa sản phẩm khỏi giỏ hàng?",

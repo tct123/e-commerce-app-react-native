@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import {
   View,
   StyleSheet,
-  SafeAreaView,
   TouchableOpacity,
   Keyboard,
   Alert,
@@ -20,6 +19,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { ResetPassword } from "../../reducers";
 import Loader from "../../components/Loaders/Loader";
 import * as SecureStore from "expo-secure-store";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 //Validation
 const validate = (values) => {

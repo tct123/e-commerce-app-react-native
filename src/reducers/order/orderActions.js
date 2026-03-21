@@ -13,7 +13,7 @@ export const fetchOrder = () => {
       type: ORDER_LOADING,
     });
     const user = getState().auth.user;
-    if (user.userid == undefined) {
+    if (user.userid === undefined) {
       return;
     }
     try {

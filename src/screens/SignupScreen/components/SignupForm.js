@@ -11,6 +11,7 @@ import {
   ScrollView,
   Alert,
   Dimensions,
+  Platform,
 } from "react-native";
 //Colors
 import Colors from "../../../utils/Colors";
@@ -88,9 +89,9 @@ const Signup = (props) => {
   };
   return (
     <KeyboardAvoidingView
-      behavior={Platform.OS == "ios" ? "position" : "height"}
-      // keyboardVerticalOffset={40} // adjust the value here if you need more padding
-      // style={{ flex: 1 }}
+      behavior={Platform.OS === "ios" ? "position" : "height"}
+    // keyboardVerticalOffset={40} // adjust the value here if you need more padding
+    // style={{ flex: 1 }}
     >
       <TouchableOpacity
         onPress={() => {

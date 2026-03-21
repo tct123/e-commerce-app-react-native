@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet, Dimensions, TouchableOpacity } from "react-native";
+import { View, StyleSheet, Dimensions, TouchableOpacity, Platform } from "react-native";
 //Text
 import CustomText from "../../../components/UI/CustomText";
 //Icon
@@ -30,8 +30,8 @@ export const Header = ({ navigation, user, carts }) => {
         {Object.keys(user).length === 0
           ? ""
           : carts.items.length === 0
-          ? ""
-          : `(${carts.items.length})`}
+            ? ""
+            : `(${carts.items.length})`}
       </CustomText>
       <View style={{ width: 15 }} />
     </View>

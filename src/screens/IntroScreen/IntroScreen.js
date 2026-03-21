@@ -5,6 +5,7 @@ import {
   Dimensions,
   Animated,
   StatusBar,
+  Platform,
 } from "react-native";
 //Redux
 import { useDispatch } from "react-redux";

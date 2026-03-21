@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react';
 import * as RootNavigation from '../navigation/RootNavigation';
-import { TouchableOpacity } from 'react-native';
+import { Alert, TouchableOpacity } from 'react-native';
 import * as Linking from 'expo-linking';
 import Colors from './Colors';
 //Upload Image
@@ -74,17 +74,17 @@ export const _pickImage = async (action) => {
     const type =
       action === 'library'
         ? ImagePicker.launchImageLibraryAsync({
-            mediaTypes: ImagePicker.MediaTypeOptions.All,
-            allowsEditing: true,
-            aspect: [4, 4],
-            quality: 1,
-          })
+          mediaTypes: ImagePicker.MediaTypeOptions.All,
+          allowsEditing: true,
+          aspect: [4, 4],
+          quality: 1,
+        })
         : ImagePicker.launchCameraAsync({
-            mediaTypes: ImagePicker.MediaTypeOptions.All,
-            allowsEditing: true,
-            aspect: [4, 4],
-            quality: 1,
-          });
+          mediaTypes: ImagePicker.MediaTypeOptions.All,
+          allowsEditing: true,
+          aspect: [4, 4],
+          quality: 1,
+        });
 
     let result = await type;
     return result;
