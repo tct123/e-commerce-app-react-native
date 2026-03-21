@@ -3,7 +3,10 @@
     "scheme": "cattuong",
     "name": "Cat Tuong",
     "slug": "e-commerce-app",
-    "platforms": ["ios", "android"],
+    "platforms": [
+      "ios",
+      "android"
+    ],
     "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./src/assets/icon.png",
@@ -15,8 +18,9 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": ["./src/assets/**/*"],
-
+    "assetBundlePatterns": [
+      "./src/assets/**/*"
+    ],
     "ios": {
       "bundleIdentifier": "com.cattuong.ecommerce",
       "buildNumber": "1.0.1",
@@ -38,7 +42,13 @@
       ],
       "softwareKeyboardLayoutMode": "pan"
     },
-    "notification": { "icon": "./src/assets/icon.png" },
-    "description": "E-commerce app contains all necessary features"
+    "notification": {
+      "icon": "./src/assets/icon.png"
+    },
+    "description": "E-commerce app contains all necessary features",
+    "plugins": [
+      "expo-secure-store",
+      "expo-sharing"
+    ]
   }
 }
