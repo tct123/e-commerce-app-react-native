@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { LogBox } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { useSelector } from 'react-redux';
+import { useSelector , useDispatch } from 'react-redux';
 import { NavigationContainer } from '@react-navigation/native';
 import { navigationRef } from './RootNavigation';
 import { DrawerNavigator, IntroStackScreen } from './StoneNavigator';
-import { useDispatch } from 'react-redux';
 import { Logout } from '../reducers';
 //Modalize
 import { Host } from 'react-native-portalize';

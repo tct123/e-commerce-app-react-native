@@ -35,8 +35,7 @@ import { ProductScreen } from '../screens/ProductScreen';
 // Order Screens
 import { OrderScreen } from '../screens/OrderScreen';
 import { PreOrderScreen } from '../screens/PreOrderScreen';
-import { PaymentScreen } from '../screens/PaymentScreen';
-import { AddCreditCardScreen } from '../screens/PaymentScreen';
+import { PaymentScreen , AddCreditCardScreen } from '../screens/PaymentScreen';
 import { FinishOrderScreen } from '../screens/FinishOrderScreen';
 // Profile Screens
 import { ProfileScreen } from '../screens/ProfileScreen';
