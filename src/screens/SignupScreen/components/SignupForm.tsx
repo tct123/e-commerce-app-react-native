@@ -23,12 +23,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { SignUp as SignUpAct } from "../../../reducers";
 //PropTypes check
 import PropTypes from "prop-types";
-import renderField from "./RenderField";
+import { renderField } from "./RenderField";
 
 const { width, height } = Dimensions.get("window");
 
 //Validation
-const validate = (values) => {
+const validate = (values: { email: string; password: string | any[]; confirmpassword: any; username: string | any[]; }) => {
   const errors = {};
   if (!values.email) {
     errors.email = "Email không được bỏ trống";
@@ -56,7 +56,7 @@ const validate = (values) => {
   return errors;
 };
 
-const Signup = (props) => {
+const Signup = (props: { navigation?: any; handleSubmit?: any; reset?: any; }) => {
   const { handleSubmit, reset } = props;
   const dispatch = useDispatch();
   const loading = useSelector((state) => state.auth.isLoading);
@@ -69,7 +69,7 @@ const Signup = (props) => {
     };
   }, []);
 
-  const submit = async (values) => {
+  const submit = async (values: { username: any; email: any; password: any; }) => {
     try {
       await dispatch(SignUpAct(values.username, values.email, values.password));
       reset();

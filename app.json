@@ -33,7 +33,6 @@
     "android": {
       "package": "com.cattuong.ecommerce",
       "versionCode": 2,
-      "useNextNotificationsApi": true,
       "permissions": [
         "CAMERA",
         "WRITE_EXTERNAL_STORAGE",
@@ -41,9 +40,6 @@
         "USE_FINGERPRINT"
       ],
       "softwareKeyboardLayoutMode": "pan"
-    },
-    "notification": {
-      "icon": "./src/assets/icon.png"
     },
     "description": "E-commerce app contains all necessary features",
     "plugins": [
