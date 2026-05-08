@@ -37,7 +37,7 @@ export class SummaryOrder extends React.PureComponent {
           >
             Thành tiền
           </CustomText>
-          <NumberFormat price={total.toString()} />
+          <NumberFormat price={total.toString()} color={undefined} />
         </View>
       </View>
     );

@@ -36,7 +36,7 @@ export const PaymentBody = ({ navigation, payByCard, setPayByCard, token }) => {
             status={payByCard ? "checked" : "unchecked"}
             color={Colors.lighter_green}
             onPress={() => navigation.navigate("AddCreditCardScreen")}
-            // containerStyle={{ padding: 5 }}
+          // containerStyle={{ padding: 5 }}
           />
           <MaterialCommunityIcons
             name='credit-card-outline'

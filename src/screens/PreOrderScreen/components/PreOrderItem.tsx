@@ -32,7 +32,7 @@ class PreOrderItem extends React.PureComponent {
             displayType={"text"}
             thousandSeparator={true}
             suffix={" đ"}
-            renderText={(formattedValue) => (
+            renderText={(formattedValue: any) => (
               <View style={styles.priceContainer}>
                 <CustomText style={{ fontSize: 13, padding: 0 }}>
                   SL: x {item.quantity}

@@ -4,7 +4,7 @@ import PaymentFormView from "./PaymentFormView";
 /**
  * The class renders a view with PaymentFormView
  */
-export const AddSubscriptionView = (props) => {
+export const AddSubscriptionView = (props: React.JSX.IntrinsicAttributes & React.JSX.IntrinsicClassAttributes<PaymentFormView> & Readonly<{}>) => {
   return (
     <View style={styles.container}>
       <View style={styles.cardFormWrapper}>

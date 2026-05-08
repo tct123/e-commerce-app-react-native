@@ -26,10 +26,10 @@ export const ProductBody = ({
 }) => {
   const DATA = [];
   const bracelets = productsFilter.filter(
-    (bracelet) => bracelet.type === 'bracelet',
+    (bracelet: { type: string; }) => bracelet.type === 'bracelet',
   );
-  const rings = productsFilter.filter((ring) => ring.type === 'ring');
-  const stones = productsFilter.filter((stone) => stone.type === 'stone');
+  const rings = productsFilter.filter((ring: { type: string; }) => ring.type === 'ring');
+  const stones = productsFilter.filter((stone: { type: string; }) => stone.type === 'stone');
   DATA.push({ title: 'Vòng Chuối Ngọc', data: bracelets });
   DATA.push({ title: 'Nhẫn Ruby', data: rings });
   DATA.push({ title: 'Đá Quý', data: stones });

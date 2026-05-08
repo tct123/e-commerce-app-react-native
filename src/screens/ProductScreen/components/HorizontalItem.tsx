@@ -56,7 +56,7 @@ const HorizontalItem = ({ item, navigation }) => {
               <AntDesign name="star" color="#fed922" size={15} />
               <CustomText style={styles.score}>4.5</CustomText>
             </View>
-            <NumberFormat price={item.price} />
+            <NumberFormat price={item.price} color={undefined} />
           </View>
         </View>
       </BlurView>

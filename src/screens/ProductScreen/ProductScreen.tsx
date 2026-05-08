@@ -7,12 +7,12 @@ import Colors from "../../utils/Colors";
 //Component
 import { ProductBody } from "./components";
 
-export const ProductScreen = (props) => {
+export const ProductScreen = (props: { navigation: unknown; }) => {
   const products = useSelector((state) => state.store.products);
 
   const [productsFilter, setproductsFilter] = useState(products);
-  const searchFilterFunction = (text) => {
-    const data = products.filter((product) =>
+  const searchFilterFunction = (text: string) => {
+    const data = products.filter((product: { filename: string; }) =>
       product.filename.toLowerCase().includes(text.toLowerCase())
     );
     setproductsFilter(data);

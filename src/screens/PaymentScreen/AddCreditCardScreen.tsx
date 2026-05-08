@@ -10,7 +10,7 @@ export const AddCreditCardScreen = ({ navigation }) => {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState(null);
   // Handles submitting the payment request
-  const onSubmit = async (creditCardInput) => {
+  const onSubmit = async (creditCardInput: any) => {
     // Disable the Submit button after the request is sent
     // console.log(creditCardInput);
     setSubmitted(true);

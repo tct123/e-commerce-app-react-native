@@ -1,15 +1,19 @@
 import React, { Component } from "react";
-import { View, Text, TextInput, StyleSheet, Dimensions, Platform } from "react-native";
+import { View, Text, TextInput, StyleSheet, Dimensions, Platform, AnimatableNumericValue } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 //Color
 import Colors from "../../../utils/Colors";
 //Animate
 import Animated, { Easing } from "react-native-reanimated";
+import { AnimatedNode } from "react-native/types_generated/Libraries/Animated/AnimatedExports";
 //height
 const { height } = Dimensions.get("window");
 
 export default class SearchInput extends Component {
-  constructor(props) {
+  titleHeight: any;
+  titleopacity: any;
+  titleOpacity: AnimatableNumericValue | SharedValueDisableContravariance<number> | SharedValueDisableContravariance<AnimatedNode> | { addListener: ((callback: (value: any) => any) => string) | SharedValueDisableContravariance<(callback: (value: any) => any) => string> | {}; removeListener: ((id: string) => void) | SharedValueDisableContravariance<(id: string) => void> | {}; removeAllListeners: (() => void) | SharedValueDisableContravariance<() => void> | {}; hasListeners: (() => boolean) | SharedValueDisableContravariance<() => boolean> | {}; } | undefined;
+  constructor(props: {}) {
     super(props);
     // state
     this.state = {
@@ -43,7 +47,7 @@ export default class SearchInput extends Component {
       easing: Easing.inOut(Easing.ease),
     }).start();
   };
-  _textChangeHandler = (text) => {
+  _textChangeHandler = (text: string) => {
     this.props.inputValue(text);
   };
   render() {
@@ -58,7 +62,7 @@ export default class SearchInput extends Component {
           <Text style={styles.titleText}>Tất cả sản phẩm</Text>
         </Animated.View>
         <View style={styles.inputBox}>
-          <Ionicons name='ios-search' size={20} color={Colors.text} />
+          <Ionicons name='search' size={20} color={Colors.text} />
           <TextInput
             placeholder='Nhập tên sản phẩm'
             clearButtonMode='always'

@@ -23,7 +23,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { secretKey } from "../../utils/Config";
 
 //Validation
-const validate = (values) => {
+const validate = (values: { password: string | any[]; confirmpassword: any; }) => {
   const errors = {};
 
   if (!values.password) {
@@ -38,14 +38,14 @@ const validate = (values) => {
   return errors;
 };
 
-const resetForm = (props) => {
+const resetForm = (props: { route?: any; navigation?: any; handleSubmit?: any; reset?: any; }) => {
   const { handleSubmit, reset } = props;
   const dispatch = useDispatch();
   const [showPass, setShowPass] = useState(false);
   const loading = useSelector((state) => state.auth.isLoading);
   const [showConfirmPass, setshowConfirmPass] = useState(false);
   const url = props.route.params;
-  const submit = async (values) => {
+  const submit = async (values: { password: any; }) => {
     try {
       await dispatch(ResetPassword(values.password, url));
       await SecureStore.deleteItemAsync(secretKey);

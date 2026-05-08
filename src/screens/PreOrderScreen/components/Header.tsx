@@ -27,7 +27,7 @@ export const Header = ({ navigation }) => {
         >
           <TouchableOpacity onPress={() => navigation.goBack()}>
             <Ionicons
-              name='ios-arrow-back'
+              name='arrow-back'
               size={30}
               color={Colors.lighter_green}
             />

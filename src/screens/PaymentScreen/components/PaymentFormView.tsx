@@ -7,7 +7,7 @@ import Colors from "../../../utils/Colors";
 import PropTypes from "prop-types";
 
 export default class PaymentFormView extends React.Component {
-  constructor(props) {
+  constructor(props: {}) {
     super(props);
     this.state = { cardData: { valid: false } };
   }

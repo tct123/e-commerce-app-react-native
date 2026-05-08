@@ -11,7 +11,7 @@ import CustomText from '../../components/UI/CustomText';
 import { Header, PaymentBody } from './components';
 import { SummaryOrder } from '../PreOrderScreen/components';
 
-export const PaymentScreen = (props) => {
+export const PaymentScreen = (props: { route: { params: { token?: any; orderItems?: any; name?: any; phone?: any; total?: any; cartId?: any; fullAddress?: any; }; }; navigation: unknown; }) => {
   const [loading, setLoading] = useState(true);
   const carts = useSelector((state) => state.cart.cartItems);
   const cartLoading = useSelector((state) => state.cart.isLoading);

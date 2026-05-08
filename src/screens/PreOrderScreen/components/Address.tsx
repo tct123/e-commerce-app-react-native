@@ -21,7 +21,7 @@ const Address = ({ getInfo }) => {
   const [getTowns, setGetTowns] = useState(initialTown);
   //Filter Towns
   const townsFilter = useCallback(
-    (name) => {
+    (name: React.SetStateAction<string>) => {
       if (name === "1") {
         setselectedTown("");
       } else {
@@ -64,7 +64,7 @@ const Address = ({ getInfo }) => {
       <View style={[styles.boxSelect, { marginTop: 15 }]}>
         <View>
           <RNPickerSelect
-            onValueChange={(value) => townsFilter(value)}
+            onValueChange={(value: any) => townsFilter(value)}
             placeholder={{ label: "Tỉnh/Thành phố", value: "1" }}
             items={Provinces}
             style={pickerSelectStyles}
@@ -76,7 +76,7 @@ const Address = ({ getInfo }) => {
       <View style={styles.boxSelect}>
         <View>
           <RNPickerSelect
-            onValueChange={(value) => setselectedTown(value)}
+            onValueChange={(value: React.SetStateAction<string>) => setselectedTown(value)}
             placeholder={{ label: "Quận/Huyện", value: "" }}
             items={getTowns}
             value={selectedTown}

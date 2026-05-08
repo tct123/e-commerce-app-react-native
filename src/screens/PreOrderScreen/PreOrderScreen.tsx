@@ -10,7 +10,7 @@ import Colors from "../../utils/Colors";
 import { Header, SummaryOrder, TotalButton, UserForm } from "./components";
 import Loader from "../../components/Loaders/Loader";
 
-export const PreOrderScreen = (props) => {
+export const PreOrderScreen = (props: { route: { params: { cartItems: any; total: any; cartId: any; }; }; navigation: unknown; }) => {
   const unmounted = useRef(false);
   const isFocused = useIsFocused();
   const [loading, setLoading] = useState(true);
@@ -38,20 +38,20 @@ export const PreOrderScreen = (props) => {
     }
     return;
   }, [isFocused]);
-  const getInfo = (province, town) => {
+  const getInfo = (province: React.SetStateAction<string>, town: React.SetStateAction<string>) => {
     setProvince(province);
     setTown(town);
   };
-  const getReceiver = (name, phone, address) => {
+  const getReceiver = (name: React.SetStateAction<string>, phone: React.SetStateAction<string>, address: React.SetStateAction<string>) => {
     setName(name);
     setPhone(phone);
     setAddress(address);
   };
-  const checkValidation = (error) => {
+  const checkValidation = (error: React.SetStateAction<string>) => {
     setError(error);
   };
-  let orderItems = [];
-  cartItems.map((item) => {
+  let orderItems: { item: any; quantity: any; }[] = [];
+  cartItems.map((item: { item: { _id: any; }; quantity: any; }) => {
     orderItems.push({ item: item.item._id, quantity: item.quantity });
   });
 
